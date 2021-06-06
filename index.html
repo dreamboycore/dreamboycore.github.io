@@ -1,24 +1,63 @@
 <!doctype html> 
 <html lang="zh" class="no-js"> 
 <head> 
-  <meta charset="utf-8" /> 
-  <title>Dreamboycore Official</title> 
-  <link rel="stylesheet" href="css/style.css" />
-  <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
-  <script type='text/javascript' src='js/jquery.particleground.min.js'></script>
-  <script type='text/javascript' src='js/demo.js'></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" />
+	<meta charset="utf-8" /> 
+	<title>Dreamboycore Official</title> 
+  
+	<link rel="stylesheet" href="orig/css/style.css" />
+	<script type='text/javascript' src='orig/js/jquery-1.11.1.min.js'></script>
+	<script type='text/javascript' src='orig/js/jquery.particleground.min.js'></script>
+	<script type='text/javascript' src='orig/js/demo.js'></script>
+
+	<link rel="stylesheet" href="layui/css/layui.css">
+
+	<!--
+	<link href="axui/css/ax.css" rel="stylesheet" type="text/css" >
+	-->
 </head> 
 
 <body>
-
 <div id="particles">
 	<div class="intro">
-		<h1>一个免费分享的平台</h1>
+		<h1>洛小梦工作室</h1>
 		<p>Dreamboycore Official</p>
-    <a href="http://www.dreamboycore-official.com" class="btn">我的网站</a>
-    <a href="" class="btn" onclick="alert('维护中')">备用网站1</a>
-    <a href="http://8.129.6.46" class="btn" onclick="alert('维护中')">备用网站2</a>
+		<a href="##" class="btn" onclick="L_demoNav.className='layui-nav layui-nav-tree layui-nav-side'; L_demoNavReset.className='layui-nav-item layui-this';">网页导航</a>
+		<a href="http://link.dreamboycore-official.xyz/0-my-link" class="btn">联系方式</a>	
 	</div>
+	<ul class="layui-nav layui-nav-tree layui-hide" id="L_demoNav" lay-filter="test">
+	    <li class="layui-nav-item"><a href="http://www.dreamboycore-official.com">我的网站</a></li>
+	    <li class="layui-nav-item layui-nav-itemed">
+	        <a href="javascript:;">开发完成</a>
+	        <dl class="layui-nav-child">
+	        <dd><a href="http://link.dreamboycore-official.xyz">我的音乐</a></dd>
+	        <dd><a href="http://music.dreamboycore-official.xyz">在线音乐</a></dd>
+	        <dd><a href="http://log.dreamboycore-official.xyz">我的日志</a></dd>
+			</dl>
+		</li>
+		<li class="layui-nav-item">
+	        <a href="javascript:;">正在开发</a>
+	        <dl class="layui-nav-child">
+	        <dd><a href="" onclick="alert('网站搭建中')">我的文档</a></dd>
+	        <dd><a href="" onclick="alert('网站搭建中')">我的游戏</a></dd>
+	        </dl>
+	    </li>
+	    <li class="layui-nav-item layui-hide" id="L_demoNavReset">
+	        <a href="javascript:;" onclick="L_demoNav.className='layui-nav layui-nav-tree layui-hide';L_demoNavReset.className='layui-nav-item layui-hide';">关闭导航</a>
+	    </li>
+	</ul>
 </div>
+<script src="layui/layui.js" charset="utf-8"></script>
+
+<!--
+<script src="axui/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="axui/js/ax.min.js" type="text/javascript"></script>
+-->
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+
 </body> 
-</html> 
+</html>
